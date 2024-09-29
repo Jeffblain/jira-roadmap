@@ -1,8 +1,17 @@
 (function() {
+    console.log("Jira Timeline Customizer script loaded."); // Log for debug
+
     // Wait until DOM is fully loaded
     document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM fully loaded, starting customization."); // Log for debug
+
         // Select all timeline items (assuming class 'timeline-item' exists for simplicity)
         const timelineItems = document.querySelectorAll('.timeline-item');
+
+        if (timelineItems.length === 0) {
+            console.error("No timeline items found."); // Log if no items are found
+            return;
+        }
 
         timelineItems.forEach(item => {
             const issueName = item.getAttribute('data-issue-name') || "No name";
@@ -56,5 +65,6 @@
         });
 
         document.body.appendChild(autoAssignButton);
+        console.log("Customization applied.");
     });
 })();
