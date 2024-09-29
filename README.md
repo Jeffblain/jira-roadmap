@@ -20,6 +20,6 @@ You can use this custom script in Jira by creating a **bookmarklet**. Follow the
    ```javascript
    javascript:(function() {
        var script = document.createElement('script');
-       script.src = 'https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPO/main/timeline-customization.js';
+       script.src = '[https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPO/main/timeline-customization.js](https://raw.githubusercontent.com/Jeffblain/jira-roadmap/refs/heads/main/timeline-customization.js)';
        document.body.appendChild(script);
    })();
